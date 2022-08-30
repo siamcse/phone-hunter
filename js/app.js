@@ -30,7 +30,7 @@ const displayPhones = (phones, dataLimit) =>{
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
         phoneDiv.innerHTML = `
-            <div class="card p-4">
+            <div class="card h-100 p-4">
                 <img src="${image}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${phone_name}</h5>
@@ -83,7 +83,7 @@ const loadPhoneDetails = async model =>{
     displayPhoneDetails(data.data);
 }
 const displayPhoneDetails = phone =>{
-    console.log(phone);
+    // console.log(phone);
     const {name, image, mainFeatures, releaseDate, brand} = phone;
     const {displaySize,chipSet,memory,sensors} = mainFeatures;
     const phoneTitle = document.getElementById('phoneDetailModalLabel');
